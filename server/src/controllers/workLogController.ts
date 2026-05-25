@@ -13,7 +13,7 @@ export const workLogController = {
 
   async getById(req: Request, res: Response, next: NextFunction) {
     try {
-      const workLog = await workLogService.getById(req.params.id);
+      const workLog = await workLogService.getById(req.params.id as string);
       res.json(workLog);
     } catch (error) {
       next(error);
@@ -31,7 +31,7 @@ export const workLogController = {
 
   async update(req: Request, res: Response, next: NextFunction) {
     try {
-      const workLog = await workLogService.update(req.params.id, req.body);
+      const workLog = await workLogService.update(req.params.id as string, req.body);
       res.json(workLog);
     } catch (error) {
       next(error);
@@ -40,7 +40,7 @@ export const workLogController = {
 
   async delete(req: Request, res: Response, next: NextFunction) {
     try {
-      await workLogService.delete(req.params.id);
+      await workLogService.delete(req.params.id as string);
       res.status(204).send();
     } catch (error) {
       next(error);
