@@ -8,9 +8,6 @@ export const validate =
       const data = schema.parse(source === 'body' ? req.body : req.query);
       if (source === 'body') {
         req.body = data;
-      } else {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        req.query = data as any;
       }
       next();
     } catch (error) {
