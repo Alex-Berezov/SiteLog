@@ -1,5 +1,5 @@
 import { Layout, Menu, Typography, theme } from 'antd';
-import { BookOutlined, DashboardOutlined } from '@ant-design/icons';
+import { BookOutlined } from '@ant-design/icons';
 import WorkLogsPage from './pages/WorkLogsPage';
 import './App.css';
 
@@ -23,9 +23,6 @@ function App() {
           }}
         />
         <Menu theme="dark" mode="inline" defaultSelectedKeys={['work-logs']}>
-          <Menu.Item key="dashboard" icon={<DashboardOutlined />}>
-            Дашборд
-          </Menu.Item>
           <Menu.Item key="work-logs" icon={<BookOutlined />}>
             Журнал работ
           </Menu.Item>
