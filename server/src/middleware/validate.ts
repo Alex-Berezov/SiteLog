@@ -14,7 +14,7 @@ export const validate =
       next();
     } catch (error) {
       if (error instanceof ZodError) {
-        const zError = error as ZodError;
+        const zError = error as any;
         res.status(400).json({
           message: 'Ошибка валидации',
           errors: zError.errors.map((e: any) => ({
