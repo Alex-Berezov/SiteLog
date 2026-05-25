@@ -17,7 +17,9 @@ export class WorkLogsService {
       if (dateTo) where.date.lte = new Date(dateTo);
     }
 
-    const orderBy = (sortBy ? { [sortBy]: order } : { date: 'desc' }) as Prisma.WorkLogOrderByWithRelationInput;
+    const orderBy = (
+      sortBy ? { [sortBy]: order } : { date: 'desc' }
+    ) as Prisma.WorkLogOrderByWithRelationInput;
 
     return this.prisma.workLog.findMany({
       where,
@@ -54,7 +56,7 @@ export class WorkLogsService {
 
   async update(id: string, data: UpdateWorkLogDto) {
     await this.findOne(id); // Check existence
-    
+
     return this.prisma.workLog.update({
       where: { id },
       data: {

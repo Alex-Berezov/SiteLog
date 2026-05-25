@@ -94,7 +94,9 @@ describe('App e2e', () => {
     });
 
     it('GET /api/work-logs/:id — should return 404 for non-existent id', async () => {
-      const res = await request(app.getHttpServer()).get('/api/work-logs/123e4567-e89b-12d3-a456-426614174000');
+      const res = await request(app.getHttpServer()).get(
+        '/api/work-logs/123e4567-e89b-12d3-a456-426614174000',
+      );
       expect(res.status).toBe(404);
     });
 
