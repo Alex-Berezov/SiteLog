@@ -14,8 +14,17 @@ app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-app.listen(PORT, () => {
-  console.info(`Server is running on http://localhost:${PORT}`);
+import prisma from './lib/prisma';
+
+app.listen(PORT, async () => {
+  try {
+    await prisma.$connect();
+    console.info('Database connected successfully');
+    console.info(`Server is running on http://localhost:${PORT}`);
+  } catch (error) {
+    console.error('Failed to connect to database:', error);
+    process.exit(1);
+  }
 });
 
 export default app;

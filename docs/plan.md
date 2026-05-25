@@ -72,16 +72,16 @@
 
 ## Фаза 2. База данных и модели
 
-- [ ] **2.1 Prisma-схема и миграции**
-  - [ ] `npx prisma init` в `server/`
-  - [ ] Описать модели:
+- [x] **2.1 Prisma-схема и миграции** ✅
+  - [x] `npx prisma init` в `server/`
+  - [x] Описать модели:
     - `WorkType` — id, name (справочник видов работ)
     - `WorkLog` — id, date, workTypeId (FK → WorkType), volume, unit, workerName, createdAt, updatedAt
-  - [ ] Создать миграцию: `npx prisma migrate dev`
-  - [ ] Настроить `prisma/seed.ts` — предзаполнить `WorkType` данными
-- [ ] **2.2 Prisma Client и подключение**
-  - [ ] Создать `src/lib/prisma.ts` — синглтон Prisma Client
-  - [ ] Проверить подключение при старте сервера
+  - [x] Создать миграцию: `npx prisma migrate dev`
+  - [x] Настроить `prisma/seed.ts` — предзаполнить `WorkType` данными
+- [x] **2.2 Prisma Client и подключение** ✅
+  - [x] Создать `src/lib/prisma.ts` — синглтон Prisma Client
+  - [x] Проверить подключение при старте сервера
 
 ---
 
