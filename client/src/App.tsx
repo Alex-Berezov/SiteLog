@@ -14,7 +14,14 @@ function App() {
           </Title>
         </Header>
         <Content style={{ padding: '24px', background: '#f5f5f5' }}>
-          <div style={{ background: 'white', padding: '24px', borderRadius: '8px', minHeight: '300px' }}>
+          <div
+            style={{
+              background: 'white',
+              padding: '24px',
+              borderRadius: '8px',
+              minHeight: '300px',
+            }}
+          >
             <Title level={4}>Добро пожаловать</Title>
             <p>Здесь будет таблица журнала работ.</p>
             <Button type="primary">Тестовая кнопка Ant Design</Button>
