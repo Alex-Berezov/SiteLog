@@ -1,10 +1,10 @@
 FROM node:20-alpine AS builder
 
 WORKDIR /app
-COPY package.json yarn.lock ./
+COPY client/package.json client/yarn.lock ./
 RUN yarn install --frozen-lockfile
 
-COPY . .
+COPY client/ .
 RUN yarn build
 
 FROM nginx:alpine AS runner
