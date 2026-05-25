@@ -3,7 +3,7 @@ import { Modal, Form, Input, InputNumber, Select, DatePicker } from 'antd';
 import dayjs from 'dayjs';
 import { useWorkTypes } from '../hooks/useWorkTypes';
 import { useCreateWorkLog, useUpdateWorkLog } from '../hooks/useWorkLogs';
-import { WorkLog } from '../types';
+import type { WorkLog } from '../types';
 
 interface WorkLogModalProps {
   open: boolean;

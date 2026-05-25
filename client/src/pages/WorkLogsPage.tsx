@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 import type { ColumnsType } from 'antd/es/table';
 
 import { useWorkLogs, useDeleteWorkLog } from '../hooks/useWorkLogs';
-import { WorkLog } from '../types';
+import type { WorkLog } from '../types';
 import WorkLogModal from '../components/WorkLogModal';
 
 const { RangePicker } = DatePicker;

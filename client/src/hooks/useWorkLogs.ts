@@ -1,6 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { workLogsApi } from '../api/workLogs';
-import { WorkLogQuery, CreateWorkLogInput, UpdateWorkLogInput } from '../types';
+import type { WorkLogQuery, CreateWorkLogInput, UpdateWorkLogInput } from '../types';
 import { message } from 'antd';
 
 export const useWorkLogs = (query?: WorkLogQuery) => {

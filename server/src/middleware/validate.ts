@@ -9,14 +9,17 @@ export const validate =
       if (source === 'body') {
         req.body = data;
       } else {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         req.query = data as any;
       }
       next();
     } catch (error) {
       if (error instanceof ZodError) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const zError = error as any;
         res.status(400).json({
           message: 'Ошибка валидации',
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           errors: zError.errors.map((e: any) => ({
             field: e.path.join('.'),
             message: e.message,

@@ -1,5 +1,5 @@
 import { apiClient } from './apiClient';
-import { WorkLog, WorkLogQuery, CreateWorkLogInput, UpdateWorkLogInput } from '../types';
+import type { WorkLog, WorkLogQuery, CreateWorkLogInput, UpdateWorkLogInput } from '../types';
 
 export const workLogsApi = {
   getAll: async (query?: WorkLogQuery): Promise<WorkLog[]> => {

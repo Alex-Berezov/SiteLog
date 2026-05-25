@@ -1,5 +1,5 @@
 import { apiClient } from './apiClient';
-import { WorkType } from '../types';
+import type { WorkType } from '../types';
 
 export const workTypesApi = {
   getAll: async (): Promise<WorkType[]> => {
